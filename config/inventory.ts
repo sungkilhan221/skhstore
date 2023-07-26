@@ -64,8 +64,11 @@ export const inventory: InventoryProduct[] = [
     name: "Braided Leather Belt",
     description: `These handsome leather belts are guaranteed to pull together any outfit. They're made of vegetable-tanned Italian leather, which means they have natural highs and lows of color and will look even better over time.`,
     price: 4999,
-    image: "",
-    images: [""],
+    image:
+      "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
+    images: [
+      "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
+    ],
     sizes: ["s", "m", "l", "xl"],
     categories: ["belts"],
     colors: ["brown"],
