@@ -1,12 +1,15 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { Loader2 } from "lucide-react"
 import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
 
 import { Button } from "@/components/ui/button"
 
 export function CartSummary() {
+  const router = useRouter()
+
   const {
     formattedTotalPrice,
     totalPrice,
@@ -30,11 +33,9 @@ export function CartSummary() {
 
     const data = await response.json()
 
-    const result = await redirectToCheckout(data.id)
+    // const result = await redirectToCheckout(data.id)
+    const result = await router.push(data.url)
 
-    if (result?.error) {
-      console.error(result)
-    }
     setLoading(false)
   }
 
